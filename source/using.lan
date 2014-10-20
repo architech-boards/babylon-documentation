@@ -1,0 +1,130 @@
+.. index:: using
+
+Getting started Babylon AC70M
+-----------------------------
+
+This chapter contain a brief of operation mode of Babylon application. More detail can be found in :ref:`more`
+
+.. _lanset:
+
+Hardware setup LAN mode
+***********************
+
+Before use the application firmware, you must connect 2 SerizII, each with its own Babylon board, as in figure below
+
+.. image:: _static/board_setup.jpg
+
+The hub in the center will connect and power all the system.
+When connected, you have 3 serial ports.
+
+- two VCOMM port (need FTDI drivers) using FDTI, one from each SerizII.
+- one VCOMM port (need a CDC driver) being implemented on the USB of the LPC435X on SerizII Server
+
+.. image:: _static/device.jpg
+
+The serizII which will show on the display “Babylon IP client” has only a single USB VCOMM connected to the mini USB (this port will use FTDI driver) and show a Client menu interface;
+
+The serizII which will show on the display “Babylon IP server” has two USB connected, the Mini port is the Server menu interface (this port will use FTDI driver), and a micro USB which is connected to the “Man-in-the-middle” process (this port will need a CDC driver);
+
+All ports work at 115200,n,8,1 no handshake.
+
+Open 2 terminal instances, one for each VCOMM connected to the MINI USB (FDTI).
+There VCOMM are immediate active as soon as the powered on.
+
+The VCOMM connected to the Micro USB is activated only after the Babylon Server SerizII has completed its initialization; wait to open this port till the SerizII has completed initialization (about 10” after power on).
+
+On both instance connected to the IP Server and IP Client, after the initialization is complete, the AC70M main menu will be displayed
+
+**--> IMAGE MAIN MENU**
+
+By pressing '1' you enter in the configuration menu
+
+**--> IMAGE CONFIGURATION SUB-MENU**
+
+This menu will enable
+–	select the AES key lengh ( '1' = 128, '2' = 256 bits )
+–	enable encryption only ( '3' ), or encrypted and signed ( '4' )
+-   toggle verbose mode for more details during data exchange
+–	return to maun menu ( 'm' go to main menu )
+
+Man-In-The-Middle menu
+^^^^^^^^^^^^^^^^^^^^^^
+
+As soon as you open the instance connected to the “Men-in-the-Middle” (micro USB on Babylon SerizII Server), this will be displayed
+
+**--> IMAGE MAN-IN-THE-MIDDLE MENU**
+
+When all the Terminal are activated, you are ready to start evaluation!!
+
+.. _auth:
+
+First steps LAN mode
+********************
+
+First of all, you must set key lengh in both Server and Client configuration sub menu. 
+3
+Type '1' from main menu, then select '1' for 128, '2' for 256 (sse image above)
+
+**--> IMAGE CONFIGURATION SUB-MENU KEY LENGHT**
+
+.. note::
+ **remember that this will be done both for Server and Client**
+ 
+To start a work session, you must switch both Server and Client to the Authenticate state. To do this, it's mandatory to follow this two steps:
+
+1 - From IP Server Main Menu, press '2' to go to Authentication mode; the server will enter in authentication wait.
+2 - From IP Client Main Menu, press '2' and Authentication process will starts.
+
+**--> IMAGE BRIEF OF AUTHENTICATION SCREEN MENU**
+
+* a few messages are exchanged between the Server and Client, and the messages are shown on the different terminal as soon as the messages arrives and start from each stage.
+* by default the “Man-In-The-Middle” is INACTIVE; you can see the status of each actor (Client/Server and “Man-In-The-Middle”) on the top of the menu display.
+
+When INACTIVE, no messages are sent to "Man-In-The-Middle" task. It will be ignored.
+
+* The “Man-in-the-middle” go to the ACTIVE state when you select how it works, as:
+	* transparent, doing nothing on the messages.
+	* interactive change mode: when a message is received, the “Man-in-the-middle”, the message is stored in the “Man-In-The-Middle” buffer waiting action made using the menu.
+	* automatic change mode: when a message is received by the “Man-in-the-middle” it is changes based on the change type selected.
+	
+* When the “Change” mode is active (either interactive or automatic), the message is modified based on the selection made (by selection on the “Man-In-The-Middle” menu)
+	* 0, set no change
+	* 1, change by XORing some characters with a specified character string
+	* 2, change by changing some characters with a specified character string
+	* When in “automatic mode” selected, any incoming message is changed and sent to the destination
+	* When in “interactive mode” (key '3' toggle this mode ), the message is stored, waiting for the “Man-In-The-Middle” operator to decide what to do with the message, The message is sent when the action is defined, and “CR” is pressed.
+	
+Sendig messages LAN mode
+************************
+
+The demo can start by leaving the “Man-In-The-Middle” inactive (default after reset).
+After autentication process ends succesfully, by selecting to send a message:
+
+* select '3' on the “Babylon IP server” menu
+* write an ascii string
+* when the “return” key is pressed, the message is encrypted and sent by Babylon IP Server; received, decrypted and shown on the Babylon IP Client terminal. 
+
+*NOTE: The AES encryption key is exchanged during the authentication phase.*
+
+**--> IMAGE SENDING MESSAGE SCREEN**
+
+Then, the “Man-In-The-Middle” can be activated, pressing '3' on its menu.
+When a message is sent from babylon IP Server, the message is now received and shown on the “Man-In-The-Middle” terminal.
+Pressing Return, the received message is sent with no modification, and can be shown on the “Babylon IP Client” terminal.
+The message can also be changed by the “Man-In-The-Middle” and the result is shown on the “Babylon IP Client”.
+
+**--> IMAGE MINT FUNCTION**
+
+Use Babylon in Stand Alone mode
+*******************************
+
+All functionality described in the above paragraph can be performed used Babylon firmware compiled in stand-alone mode. 
+The main differences are in hardware setup (shown in figure below):
+
+* one VCOMM port (need FTDI drivers) using FDTI
+* one VCOMM port (need a CDC driver) being implemented on the USB of the LPC435X
+* Server and Client are on the same board (send/receive message use RTOS queue from/to the two AC70M mounted on add-on board)
+
+The only one FTDI Vcomm port acts as Server and Client terminal.
+
+**--> IMAGE STAND ALONE HARDWARE SETUP**
