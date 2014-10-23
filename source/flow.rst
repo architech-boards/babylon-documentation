@@ -5,7 +5,7 @@
 More about firmware
 -------------------
 
-In this chapter you can find a flow of main functionallity of Babylon AC70M firmware.
+In this chapter you can find a flow of main functionallity of Babylon A70CM firmware.
 The description is referred to Stand-Alone operation mode. 
 
 *For LAN mode, remember that Server and Client are two separate boards*

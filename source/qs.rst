@@ -5,7 +5,7 @@
 Quick start guide
 -----------------
 
-This guide will provide instructions to install the development environment and all the libraries needed to compile and debug the demo firmware SerizII AC70M
+This guide will provide instructions to install the development environment and all the libraries needed to compile and debug the demo firmware SerizII A70CM
 The main steps are:
 
 - Install and register LPCXpresso IDE
@@ -83,10 +83,10 @@ Download emWIn (not included for License issues) http://www.lpcware.com/system/f
 
 *(it is important to follow the exact directory path, inside the project some files have relative reference to files included into the LPCOpen_platform_v0.51, any path change requires changes in this references)*
 
-Run the Babylon AC70M demo
+Run the Babylon A70CM demo
 **************************
 
-Open LPCXpresso6, create a workspace **SerizII_AC70M_LPC** in the directory C:\\nxp\\LPCOpen_platform_v0.51\\applications\\lpc18xx_43xx\\examples\\
+Open LPCXpresso6, create a workspace **SerizII_A70CM_LPC** in the directory C:\\nxp\\LPCOpen_platform_v0.51\\applications\\lpc18xx_43xx\\examples\\
 
 *(it is important to follow the exact directory path, inside the project some files have relative reference to files included into the LPCOpen_platform_v0.51, any path change requires changes in this references)*
 
@@ -150,6 +150,6 @@ The executable is downloaded into flash
 .. image:: _static/qs/flash_write.jpg
 
 Switch off SerizII, unconnect the emulator;
-Mount on the SerizII AC70M add-on board, then follow :ref:`gs` to start evaluation
+Mount on the SerizII A70CM (Babylon board) add-on board, then follow :ref:`gs` to start evaluation
 
 

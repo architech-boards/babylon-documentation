@@ -1,6 +1,6 @@
 .. index:: using
 
-Getting started Babylon AC70M
+Getting started Babylon A70CM
 -----------------------------
 
 This chapter contain a brief of operation mode of Babylon application. More detail can be found in :ref:`more`
@@ -33,7 +33,7 @@ There VCOMM are immediate active as soon as the powered on.
 
 The VCOMM connected to the Micro USB is activated only after the Babylon Server SerizII has completed its initialization; wait to open this port till the SerizII has completed initialization (about 10” after power on).
 
-On both instance connected to the IP Server and IP Client, after the initialization is complete, the AC70M main menu will be displayed
+On both instance connected to the IP Server and IP Client, after the initialization is complete, the A70CM main menu will be displayed
 
 **--> IMAGE MAIN MENU**
 
@@ -123,7 +123,7 @@ The main differences are in hardware setup (shown in figure below):
 
 * one VCOMM port (need FTDI drivers) using FDTI
 * one VCOMM port (need a CDC driver) being implemented on the USB of the LPC435X
-* Server and Client are on the same board (send/receive message use RTOS queue from/to the two AC70M mounted on add-on board)
+* Server and Client are on the same board (send/receive message use RTOS queue from/to the two A70CM mounted on add-on board)
 
 The only one FTDI Vcomm port acts as Server and Client terminal.
 

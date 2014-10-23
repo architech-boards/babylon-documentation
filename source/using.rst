@@ -2,7 +2,7 @@
 
 .. _gs:
 
-Getting started Babylon AC70M
+Getting started Babylon A70CM
 -----------------------------
 
 This chapter contain a brief of **Stand Alone operation mode** of Babylon application. More detail can be found in :ref:`more`
@@ -36,7 +36,7 @@ The VCOMM connected to the Micro USB is activated only after the Babylon has com
 
 .. image:: _static/Starting_sa.jpg
 
-On the instance connected to MINI USB (FDTI), after the initialization is complete, the babylon AC70M main menu will be displayed
+On the instance connected to MINI USB (FDTI), after the initialization is complete, the babylon A70CM main menu will be displayed
 
 .. image:: _static/main_menu_sa.jpg
 
@@ -120,7 +120,7 @@ After autentication process ends succesfully, by selecting to send a message:
 .. note:
 
  | **The AES encryption key used for encryption is exchanged during the authentication phase.**
- | **send/receive message use RTOS queue from/to the two AC70M mounted on add-on board**
+ | **send/receive message use RTOS queue from/to the two A70CM mounted on Babylon add-on board**
  
 
 .. image:: _static/send2.jpg
@@ -166,7 +166,7 @@ There VCOMM are immediate active as soon as the powered on.
 
 The VCOMM connected to the Micro USB is activated only after the Babylon Server SerizII has completed its initialization; wait to open this port till the SerizII has completed initialization (about 10” after power on).
 
-On both instance connected to the IP Server and IP Client, after the initialization is complete, the AC70M main menu will be displayed
+On both instance connected to the IP Server and IP Client, after the initialization is complete, the A70CM main menu will be displayed
 
 .. image:: _static/full.jpg
 

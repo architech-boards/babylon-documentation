@@ -6,8 +6,8 @@ Firmware specification
 Firmware overview
 -----------------
 
-| The Babylon AC70M demo firmware has been developed using **AC70M Host API library** and **SCI2C library** and performs RSA and AES-CBC encryption/decryption functions
-| It is designed only for evaluation purposes and to demonstrate how to use AC70M API functions. 
+| The Babylon A70CM demo firmware has been developed using **A70CM Host API library** and **SCI2C library** and performs RSA and AES-CBC encryption/decryption functions
+| It is designed only for evaluation purposes and to demonstrate how to use A70CM API functions. 
 | End-user applications can use these examples to perform encryption/decryption functions, but it's mandatory that customers follow standard specifications to improve security data exchange. 
 | Some of these specification can be found, for example, at **NIST** National Institute of Standards and Techology, section Computer Security Resource Center `CSRC <http://csrc.nist.gov/>`_
 | 
@@ -16,7 +16,7 @@ Firmware overview
 Firmware restrictions
 ---------------------
 
-| The Babylon AC70M demo firmware assumes the following restrictions:
+| The Babylon A70CM demo firmware assumes the following restrictions:
 | • Authentication Process assumes both Client than Server has same RSA certificate inside. No Certificate exchange is performed
 | • The demo program use default NXP Certificate for Autentication Process
 | • Authentication process is started from Client and uses a simple AES KeyA-KeyB exchange check. 
@@ -47,12 +47,12 @@ By using two PC terminal software connected to Babylon board (see :ref:`saset`),
 Operation mode macros
 ---------------------
 
-See at file "task_ac70.h" in project folder "\\AC70M\\inc"
+See at file "task_ac70.h" in project folder "\\A70CM\\inc"
 You can find these macros
 
 ::
 
- #define AC70_TASK 0   //enable original main_task for AC70M Host Api demo application 
+ #define AC70_TASK 0   //enable original main_task for A70CM Host Api demo application 
 
  #if AC70_TASK			//if Host api demo, no other task can be enabled
   #define IP_TASK 0
@@ -74,7 +74,7 @@ You can find these macros
  #endif
 
  
-Macro **AC70_TASK** do not set to 1, only for AC70M API demo
+Macro **AC70_TASK** do not set to 1, only for A70CM API demo
 
 Macro **IP_TASK** can be set 1 for LAN operation. 
 
@@ -102,10 +102,10 @@ You can also find these other macros:
 Project structure
 -----------------
 
-The project "lwip_tcpecho_freertos" include the following specifing folders for AC70M application
+The project "lwip_tcpecho_freertos" include the following specifing folders for A70CM application
 
 • **Babylon** – main file folder
-	• **AC70M** folder Host API and SCI2C library
+	• **A70CM** folder Host API and SCI2C library
 	• **board_dep** folder SHA1 HostCrypto source files and other include file 
 	• **babylon.c** source file Main Application Tasks
 	• **AC70_enc_dec.c** source file AC70 host API interface functions
@@ -122,7 +122,7 @@ The project "lwip_tcpecho_freertos" include the following specifing folders for 
 Brief of firmware performance
 -----------------------------
 
-| The firmware will include a minimal example how to initialize the AC70M and use Host API functions. 
+| The firmware will include a minimal example how to initialize the A70CM and use Host API functions. 
 | It include also the source files of these Host API, the source files of SCI2C library and a layer to interface main application tasks with API functions. 
 | In Stand Alone operation mode, there is only one Main Menu that will configure both Server and Client
 | Also the results of all operation (Settings, Authentication, Message exchange) are shown an same terminal window
@@ -141,7 +141,7 @@ Project and tools download
 --------------------------
 
 Instructions for tools and firmware installation can be found at Silica ArchiTech page under SerizII project section. Registration is needed to access at download section.
-Click `here <http://www.silica.com/architech.html>`_ to go to ArchiTech main page.
+Click `here <http://architechboards.org/>`_ to go to ArchiTech main page.
 
 
 

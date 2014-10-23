@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 #
-# SerizII_AC70M documentation build configuration file, created by
+# SerizII_A70CM documentation build configuration file, created by
 # sphinx-quickstart on Mon Sep 15 11:59:03 2014.
 #
 # This file is execfile()d with the current directory set to its containing dir.
@@ -40,7 +40,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'SerizII_AC70M'
+project = u'SerizII_A70CM'
 copyright = u'2014, Silica'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -164,7 +164,7 @@ html_static_path = ['_static']
 #html_file_suffix = None
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'SerizII_AC70Mdoc'
+htmlhelp_basename = 'SerizII_A70CMdoc'
 
 
 # -- Options for LaTeX output --------------------------------------------------
@@ -183,7 +183,7 @@ latex_elements = {
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto/manual]).
 latex_documents = [
-  ('index', 'SerizII_AC70M.tex', u'SerizII\\_AC70M Documentation',
+  ('index', 'SerizII_A70CM.tex', u'SerizII\\_A70CM Documentation',
    u'Silica', 'manual'),
 ]
 
@@ -213,7 +213,7 @@ latex_documents = [
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    ('index', 'serizii_ac70m', u'SerizII_AC70M Documentation',
+    ('index', 'serizii_a70cm', u'SerizII_A70CM Documentation',
      [u'Silica'], 1)
 ]
 
@@ -227,8 +227,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-  ('index', 'SerizII_AC70M', u'SerizII_AC70M Documentation',
-   u'Silica', 'SerizII_AC70M', 'One line description of project.',
+  ('index', 'SerizII_A70CM', u'SerizII_A70CM Documentation',
+   u'Silica', 'SerizII_A70CM', 'One line description of project.',
    'Miscellaneous'),
 ]
 
