@@ -61,6 +61,7 @@ Contents:
    :maxdepth: 2
 
    qs
+   patch
    PrjFiles
    using
    flow

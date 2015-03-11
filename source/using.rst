@@ -19,7 +19,7 @@ Before use the application firmware, you must connect SerizII with its own Babyl
 When connected, you have 2 serial ports.
 
 - one VCOMM port (need FTDI drivers) using FDTI.
-- one VCOMM port (need a CDC driver) being implemented on the USB of the LPC435X on SerizII Server
+- one VCOMM port (need a CDC driver - Babylon_1_0.zip file include driver folder named "USB CDC binaries") being implemented on the USB of the LPC435X on SerizII Server
 
 .. image:: _static/device.jpg
 

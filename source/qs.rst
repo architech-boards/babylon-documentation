@@ -96,6 +96,10 @@ Import the **babylon_1_0.zip** into the workspace
 
 .. image:: _static/qs/import.jpg
 
+Import project C:\\NXP\\LPCOpen_platform_v0.51\\software\\emWin
+
+.. image:: _static/qs/import_emwin.jpg
+
 The project is loaded into the workspace
 
 .. image:: _static/qs/prj.jpg
@@ -128,6 +132,14 @@ select as active the “Silica_SerizII_spifi”
 
 .. image:: _static/qs/lwip_conf.jpg
 
+
+.. important ::
+ | **BEFORE COMPILING BABYLON PROJECT, YOU MUST DOWNLOAD A70CM NXP EXAMPLE LIBRARY AND APPLY PATCHES** 
+ | **CLOSE LPCXpresso IDE AND FOLLOW** :ref:`patch` **BEFORE PROCEED**
+
+
+.. _runp: 
+
 Compile and load firmware
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -135,7 +147,7 @@ Select the **lwip_tcpecho_freertos**  project, select “debug”.
 
 The compiler will warn there are no bin files, simple press OK, until the window “Select debug configuration for lwip_tcpecho_freertos” is shown.
 
-.. image:: _static/qs/debug_set.jpg
+.. image:: _static/qs/debug1.jpg
 
 Setting OK, the compilation will start (take few minutes to compile).
 
@@ -143,7 +155,7 @@ Setting OK, the compilation will start (take few minutes to compile).
 
 End of compilation, select the JTAG port to use
 
-.. image:: _static/qs/jtag.jpg
+.. image:: _static/qs/debug2.jpg
 
 The executable is downloaded into flash
 
