@@ -14,7 +14,7 @@ Welcome to Babylon's board documentation!
 NXP Secure Authentication Microcontroller A70CM
 -----------------------------------------------
 
-.. image:: _static/nxplogo.gif
+.. image:: _static/nxplogo.jpg
 .. image:: _static/AC70_chip.jpg
 .. image:: _static/AC70_secure.jpg
 .. image:: _static/silica_big.png
