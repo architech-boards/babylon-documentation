@@ -8,7 +8,7 @@ Welcome to Babylon's board documentation!
 
 
 :Version: 1.00C
-:Copyright: (C)2014 Silica an Avnet company
+:Copyright: (C)2016 Avnet Silica company
 :Date: 11 March 2015
 
 NXP Secure Authentication Microcontroller A70CM
